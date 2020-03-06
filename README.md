@@ -1,8 +1,6 @@
 # GameOfThrones
 Android app that consume a Fake REST API Game Of Thrones
 
-# GameOut
-
 ### This project is about to consume an REST API
 
 ## App Architecture:
@@ -14,12 +12,9 @@ Android app that consume a Fake REST API Game Of Thrones
 - RxAndroid
 - Package by feature
 
-![Image of GameOut](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/Splash.jpeg)
-![Image of GameOut](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/Home.jpeg)
-![Image of GameOut](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/GameDetails.jpeg)
+![Image of Game of Thrones](https://github.com/JGuzman2210/GameOfThrones/blob/master/app/ScreenApp/screenshot-1583466496392.jpg)
 
-![Image of GameOut](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/Menu.jpeg)
-![Image of GameOut](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/Settings.jpeg)
+![Image of Game of Thrones](https://github.com/JGuzman2210/GameOfThrones/blob/master/app/ScreenApp/screenshot-1583466515152.jpg)
 
 
 ## Run the project
