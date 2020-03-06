@@ -12,7 +12,7 @@ Android app that consume a Fake REST API Game Of Thrones
 - RxAndroid
 - Package by feature
 
-![Image of Game of Thrones](https://github.com/JGuzman2210/GameOut/blob/master/ScreenApp/Splash.jpeghttps://github.com/JGuzman2210/GameOfThrones/blob/master/app/ScreenApp/screenshot-1583466496392.jpg)
+![Image of Game of Thrones](https://github.com/JGuzman2210/GameOfThrones/blob/master/app/ScreenApp/screenshot-1583466496392.jpg)
 
 ![Image of Game of Thrones](https://github.com/JGuzman2210/GameOfThrones/blob/master/app/ScreenApp/screenshot-1583466515152.jpg)
 
