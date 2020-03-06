@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GameOfThronesClone</string>
+    <string name="app_name">Juego de Tronos</string>
     <string name="characterDetailsLabel">Detalles del Personaje</string>
     <string name="error_message">Error al cargar la información, Intente nuevamente</string>
     <string name="button_retry">Recargar</string>

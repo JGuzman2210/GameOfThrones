@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Game Of Thrones</string>
+    <string name="characterDetailsLabel">Character Details</string>
+    <string name="error_message">Error while the information was loading, try again</string>
+    <string name="button_retry">Retry</string>
+</resources>
