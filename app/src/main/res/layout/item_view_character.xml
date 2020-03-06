@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/characterMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/targaryenOverlay" />
+
+    <TextView
+        android:id="@+id/characterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/whiteTransperantOwner"
+        android:textStyle="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        tools:text="Lord Comandante de la Guardia Nocturna"
+        />
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_above="@id/characterTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        tools:text="Jon Snow"
+        />
+</RelativeLayout>
