@@ -1,17 +1,16 @@
 package com.softhk.gameofthronesclone.ui.characterdetails
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.softhk.gameofthronesclone.R
 import com.softhk.gameofthronesclone.data.models.CharacterRemoteModel
-import com.softhk.gameofthronesclone.utils.CharacterBackground
+import com.softhk.gameofthronesclone.utils.*
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_character_details.*
 import kotlinx.android.synthetic.main.item_body_character_details.*
 import kotlinx.android.synthetic.main.item_header_character_details.*
 
@@ -31,16 +30,17 @@ class CharacterDetailsFragment : Fragment(), CharacterDetailsContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        arguments?.getString("KEY")?.let {
+        arguments?.getString(CharacterKeys.CHARACTER_DETAILS_FRAGMENT)?.let {
             presenter.getCharacterById(it)
         }
+
     }
 
     companion object {
         fun newInstance(data: String): CharacterDetailsFragment {
             val characterDetailsFragment = CharacterDetailsFragment()
             var bundle = Bundle()
-            bundle.putString("KEY", data)
+            bundle.putString(CharacterKeys.CHARACTER_DETAILS_FRAGMENT, data)
             characterDetailsFragment.arguments = bundle
             return characterDetailsFragment
         }
@@ -62,9 +62,18 @@ class CharacterDetailsFragment : Fragment(), CharacterDetailsContract.View {
                     characterDetailsQuote.text = quote
                     characterDetailsSpouse.text = spouse
 
-                    val baseColor = CharacterBackground.getBaseColor(houseRemoteModel.name)
-                    floatingActionButton.setImageDrawable(ContextCompat.getDrawable(context!!,CharacterBackground.getIcon(houseId = houseRemoteModel.name)))
-                    floatingActionButton.backgroundTintList = ContextCompat.getColorStateList(context!!,baseColor)
+                    with(houseRemoteModel){
+                        val baseColor = CharacterBackground.getBaseColor(name)
+                        floatingActionButton.setImageDrawable(ContextCompat.getDrawable(context!!,CharacterBackground.getIcon(houseId = name)))
+                        floatingActionButton.backgroundTintList = ContextCompat.getColorStateList(context!!,baseColor)
+                        floatingActionButton.setOnClickListener{
+                            var snackBar = Snackbar.make(it,name,Snackbar.LENGTH_SHORT)
+                            snackBar.addBackgroundColor(ContextCompat.getColor(context!!,baseColor))
+                            snackBar.show()
+
+                        }
+                    }
+
                 }
             }
         }

@@ -1,5 +1,8 @@
 package com.softhk.gameofthronesclone.utils
 
+import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
+import com.google.android.material.snackbar.Snackbar
 import com.softhk.gameofthronesclone.R
 
 object CharacterBackground {
@@ -33,4 +36,9 @@ object CharacterBackground {
         val pallete: Array<Int> = resources.get(houseId)!!
         return pallete[2]
     }
+}
+
+fun Snackbar.addBackgroundColor(@ColorInt colorInt:Int):Snackbar{
+    this.view.setBackgroundColor(colorInt)
+    return this
 }
